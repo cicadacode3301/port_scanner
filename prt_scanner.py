@@ -25,7 +25,7 @@ print(datetime.now())
 #Scanning the target
 
 try:
-	for port in range(1,500):
+	for port in range(1,65535):
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)	# to set the default timeout to connet to port as 1 sec
 		c = s.connect_ex((target,port)) # to store the error indicator as 0 or 1, if error indicatior is 0 it was able to connect and its 1 then it was unable to connect
